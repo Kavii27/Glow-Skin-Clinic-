@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Check } from "lucide-react";
 import doctorPortrait from "@/assets/doctor-portrait.jpg";
-import { CLINIC, credentials } from "@/lib/clinic-data";
+import { CLINIC, doctorProfile, professionalPhilosophy } from "@/lib/clinic-data";
 import { Reveal } from "@/components/Reveal";
 import { GoldLine } from "@/components/SectionHeading";
 
@@ -28,38 +27,33 @@ export function DoctorSection({ compact = false }: { compact?: boolean }) {
 
         <div>
           <Reveal>
-            <p className="eyebrow">The Physician</p>
-            <h2 className="mt-4 text-4xl leading-[1.1] sm:text-5xl">{CLINIC.doctor}</h2>
+            <p className="eyebrow">{doctorProfile.heading}</p>
+            <h2 className="mt-4 text-4xl leading-[1.1] sm:text-5xl">{doctorProfile.name}</h2>
             <p className="mt-3 text-[11px] tracking-[0.28em] text-gold uppercase">
-              Consultant Aesthetic Physician & Dermatology Practitioner
+              {doctorProfile.title}
             </p>
             <div className="mt-6 w-20">
               <GoldLine />
             </div>
-            <p className="mt-7 text-[15px] leading-relaxed text-muted-foreground">
-              Dr. Apeksha Herath practises aesthetic medicine as a clinical discipline first and an
-              art second. Every consultation begins with a full skin assessment — never a menu of
-              treatments — so that each protocol is prescribed for your skin, your anatomy and the
-              result you genuinely want.
-            </p>
-            <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-              With advanced training in dermatology, injectables and energy-based devices, she is
-              known for restraint: enhancements that look rested and refined, never altered.
+            {(compact ? doctorProfile.paragraphs.slice(0, 1) : doctorProfile.paragraphs).map(
+              (p, i) => (
+                <p key={i} className="mt-4 text-[15px] leading-relaxed text-muted-foreground first:mt-7">
+                  {p}
+                </p>
+              ),
+            )}
+            <p className="mt-4 text-[15px] leading-relaxed font-medium text-foreground/90">
+              {doctorProfile.closing}
             </p>
           </Reveal>
 
           {!compact && (
-            <Reveal delay={0.15}>
-              <div className="mt-9 rounded-2xl border border-border/70 bg-card p-7 shadow-soft">
-                <p className="eyebrow">Credentials</p>
-                <ul className="mt-5 grid gap-3 sm:grid-cols-2">
-                  {credentials.map((c) => (
-                    <li key={c} className="flex gap-3 text-[13px] leading-relaxed text-foreground/80">
-                      <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold" />
-                      {c}
-                    </li>
-                  ))}
-                </ul>
+            <Reveal delay={0.12}>
+              <div className="mt-9 rounded-2xl border border-gold/30 bg-card p-7 shadow-soft">
+                <p className="eyebrow">{professionalPhilosophy.eyebrow}</p>
+                <p className="mt-4 text-[14px] leading-relaxed text-muted-foreground">
+                  {professionalPhilosophy.description}
+                </p>
               </div>
             </Reveal>
           )}

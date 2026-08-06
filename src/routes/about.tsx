@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DoctorSection } from "@/components/DoctorSection";
+import { WhyChooseSection } from "@/components/WhyChooseSection";
 import { CredentialsGallery } from "@/components/CredentialsGallery";
 import { PageHeader } from "@/components/PageHeader";
 
@@ -28,10 +29,11 @@ function AboutPage() {
     <>
       <PageHeader
         eyebrow="About the Doctor"
-        title="Medicine First, Beauty Always"
+        title="Medical Excellence. Continuous Learning. Trusted Care."
         description="A clinical philosophy built on assessment, restraint and results that age well."
       />
       <DoctorSection />
+      <WhyChooseSection />
       <CredentialsGallery />
     </>
   );
