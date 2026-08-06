@@ -2,6 +2,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { CLINIC } from "@/lib/clinic-data";
+import logo from "@/assets/glow-skin-logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -38,20 +39,27 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 py-4 sm:px-8 lg:py-5">
-        <Link to="/" className="min-w-0">
-          <span
-            className={`block truncate font-[family-name:var(--font-display)] text-xl tracking-[0.16em] uppercase transition-colors sm:text-2xl ${
-              solid ? "text-foreground" : "text-pearl"
-            }`}
-          >
-            {CLINIC.name}
-          </span>
-          <span
-            className={`block truncate text-[10px] tracking-[0.3em] uppercase transition-colors ${
-              solid ? "text-muted-foreground" : "text-pearl/75"
-            }`}
-          >
-            by {CLINIC.doctor}
+        <Link to="/" className="flex min-w-0 items-center gap-3">
+          <img
+            src={logo}
+            alt={`${CLINIC.name} logo`}
+            className="h-11 w-11 shrink-0 rounded-full object-cover shadow-soft sm:h-12 sm:w-12"
+          />
+          <span className="min-w-0">
+            <span
+              className={`block truncate font-[family-name:var(--font-display)] text-xl tracking-[0.16em] uppercase transition-colors sm:text-2xl ${
+                solid ? "text-foreground" : "text-pearl"
+              }`}
+            >
+              {CLINIC.name}
+            </span>
+            <span
+              className={`block truncate text-[10px] tracking-[0.3em] uppercase transition-colors ${
+                solid ? "text-muted-foreground" : "text-pearl/75"
+              }`}
+            >
+              by {CLINIC.doctor}
+            </span>
           </span>
         </Link>
 

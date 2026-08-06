@@ -10,6 +10,7 @@ import {
 
 import { CLINIC, googleMapsUrl, treatmentCategories } from "@/lib/clinic-data";
 import { GoldLine } from "@/components/SectionHeading";
+import logo from "@/assets/glow-skin-logo.png";
 
 // Local dev: the admin dashboard runs as its own `vite dev` server, fixed
 // to port 8081 in glow-admin-suite/vite.config.ts (the main site itself
@@ -24,7 +25,12 @@ export function Footer() {
 
           {/* Clinic Info */}
           <div className="min-w-0">
-            <p className="font-[family-name:var(--font-display)] text-2xl tracking-[0.16em] uppercase">
+            <img
+              src={logo}
+              alt={`${CLINIC.name} logo`}
+              className="h-14 w-14 rounded-full object-cover shadow-soft"
+            />
+            <p className="mt-4 font-[family-name:var(--font-display)] text-2xl tracking-[0.16em] uppercase">
               {CLINIC.name}
             </p>
 
