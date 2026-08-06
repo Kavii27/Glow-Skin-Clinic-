@@ -388,26 +388,95 @@ export const credentials = [
   "Advanced Clinical & Injectable Training",
 ];
 
+export const doctorProfile = {
+  heading: "Meet Your Physician",
+  name: "Dr. H.M.T. Apeksha Herath, MBBS",
+  title: "Consultant Aesthetic Physician & Cosmetic Dermatology Practitioner",
+  paragraphs: [
+    "Dr. Apeksha Herath combines evidence-based medicine with advanced aesthetic training to deliver natural, balanced, and patient-focused results. A medical graduate of the University of Peradeniya, she believes every patient deserves a personalised treatment plan built on facial anatomy, skin biology, and long-term skin health — never a one-size-fits-all procedure.",
+    "Her expertise is continually refined through specialised training in cosmetic dermatology, facial injectables, laser medicine, and non-surgical facial rejuvenation, so every treatment at Glow Skin Clinic reflects current evidence and modern technique.",
+  ],
+  closing:
+    "Her goal is simple: to help every patient feel more confident through safe, ethical, medically guided aesthetic care.",
+};
+
+export const professionalPhilosophy = {
+  eyebrow: "Professional Philosophy",
+  description:
+    "Instead of chasing cosmetic trends, Dr. Herath believes aesthetic medicine should enhance confidence while preserving individuality. Every treatment begins with a detailed consultation, medical assessment, and discussion of realistic expectations. Safety, ethics, and long-term skin health remain at the centre of every recommendation.",
+};
+
+export const whyChoose = [
+  "Fully qualified MBBS medical doctor",
+  "University of Peradeniya graduate",
+  "Fellowship-trained in Aesthetic Medicine (FCAM)",
+  "Advanced Facial Injectable Certification (MAFI)",
+  "Evidence-based treatment planning",
+  "Focus on natural-looking enhancements",
+  "Individualised treatment plans",
+  "Commitment to patient safety and ethical practice",
+  "Continuous professional education",
+  "Modern laser and injectable techniques",
+];
+
+export type Qualification = {
+  category: string;
+  title: string;
+  institution: string;
+  description: string;
+};
+
+export const qualifications: Qualification[] = [
+  {
+    category: "Medical Qualifications",
+    title: "Bachelor of Medicine & Bachelor of Surgery (MBBS)",
+    institution: "University of Peradeniya, Sri Lanka",
+    description:
+      "Graduated from one of Sri Lanka's leading medical faculties, building a strong clinical foundation in medicine, surgery, dermatology, and patient care.",
+  },
+  {
+    category: "Specialist Training",
+    title: "Fellowship in Cosmetology & Aesthetic Medicine (FCAM)",
+    institution: "",
+    description:
+      "Completed advanced fellowship training focused on evidence-based aesthetic medicine, facial rejuvenation, skin ageing, injectables, laser therapies, and non-surgical cosmetic procedures.",
+  },
+  {
+    category: "Advanced Injectable Medicine",
+    title: "Masters Course in Advanced Facial Injectables (MAFI)",
+    institution: "",
+    description:
+      "Comprehensive hands-on training in advanced facial anatomy, dermal fillers, botulinum toxin treatments, facial balancing, and complication management.",
+  },
+  {
+    category: "Clinical Injectable Training",
+    title: "Advanced Clinical & Injectable Training",
+    institution: "",
+    description:
+      "Completed intensive practical training in modern injectable procedures under experienced aesthetic physicians, focusing on safe techniques, facial assessment, and natural-looking outcomes.",
+  },
+];
+
 export const milestones = [
   {
     year: "2012",
-    title: "MBBS, University of Peradeniya",
+    title: "Bachelor of Medicine & Bachelor of Surgery (MBBS)",
     description:
-      "Awarded the Bachelor of Medicine and Bachelor of Surgery degree, conferred at the Peradeniya convocation.",
+      "University of Peradeniya · A medical degree providing comprehensive training in clinical medicine, surgery, patient care, and evidence-based medical practice — the foundation of Dr. Herath's approach to safe, ethical aesthetic medicine.",
     image: "/doctor/mbbs-degree-certificate.jpg",
   },
   {
     year: "Training",
     title: "Advanced Clinical & Injectable Training",
     description:
-      "Hands-on training alongside a team of aesthetic practitioners, refining injectable and procedural technique.",
+      "Hands-on training alongside a team of experienced aesthetic physicians, refining injectable technique, facial assessment, and complication prevention.",
     image: "/doctor/clinical-training-batch.jpg",
   },
   {
     year: "2024",
     title: "Fellowship in Cosmetology & Aesthetic Medicine (FCAM)",
     description:
-      "Completed a specialised fellowship in cosmetology and aesthetic medicine, graded with distinction.",
+      "Advanced postgraduate fellowship covering cosmetic dermatology, facial rejuvenation, injectables, laser medicine, and modern non-surgical aesthetic treatments, completed with distinction.",
     image: "/doctor/fcam-fellowship-diploma.jpg",
   },
   {
@@ -421,7 +490,7 @@ export const milestones = [
     year: "2025",
     title: "Masters Course in Advanced Facial Injectables (MAFI)",
     description:
-      "Certified in advanced facial injectable technique after an intensive, hands-on masters programme.",
+      "An intensive advanced programme focused on facial anatomy, advanced injection techniques, facial harmonisation, patient assessment, and complication prevention.",
     image: "/doctor/mafi-masters-certificate.jpg",
   },
 ];
@@ -499,9 +568,34 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Pico, fractional, diode — the range of laser platforms can be confusing. Here's how a proper assessment narrows it down to what your skin actually needs.",
     content: [
-      "With so many laser platforms available today, it's easy to assume more advanced automatically means better suited to you. In practice, the right choice depends entirely on your skin type, concern and goals.",
-      "During a consultation, your doctor evaluates pigmentation, texture, sensitivity and downtime tolerance before recommending a protocol — rather than defaulting to whichever technology is trending.",
-      "This is why every treatment at Glow Skin Clinic begins with a medical assessment, not a treatment menu.",
+      "Laser technology has transformed modern dermatology, making it possible to treat concerns such as pigmentation, acne scars, unwanted hair, vascular lesions, wrinkles, and uneven skin texture with greater precision than ever before. However, choosing the right laser treatment is not as simple as selecting the newest machine or the most popular procedure.",
+      "Different lasers work in different ways, and the ideal treatment depends on your individual skin characteristics, medical history, and treatment goals. A personalised medical assessment is essential to ensure both safety and the best possible results.",
+      "## How Do Laser Treatments Work?",
+      "Laser stands for Light Amplification by Stimulated Emission of Radiation. Medical lasers emit concentrated light at specific wavelengths, targeting particular structures in the skin known as chromophores — including melanin (pigment), hemoglobin (blood vessels), and water within skin tissue.",
+      "Depending on the wavelength and settings used, laser energy can remove excess pigmentation, stimulate collagen production, improve skin texture, reduce acne scars, treat visible blood vessels, remove unwanted hair, and reduce signs of photoageing. Each laser has a specific purpose, which is why there is no single laser suitable for every skin concern.",
+      "## Why One Laser Does Not Fit Everyone",
+      "Many patients ask, \"Which laser is the best?\" The better question is: \"Which laser is best for my skin?\" Several factors influence treatment selection.",
+      "**Skin Type** — Darker skin tones contain more melanin, increasing the risk of complications such as post-inflammatory hyperpigmentation if inappropriate laser settings are used. Dermatologists commonly assess skin type using the Fitzpatrick Skin Type Classification, which helps guide safe treatment selection.",
+      "**Primary Skin Concern** — Different concerns require different approaches, from acne scars and fine lines to melasma, rosacea, enlarged pores and unwanted facial hair. A laser designed for hair removal will not effectively treat acne scars, and vice versa.",
+      "**Medical History** — Your doctor will ask about previous laser treatments, current medications, pregnancy or breastfeeding, recent isotretinoin use, a history of cold sores, keloid scarring, autoimmune conditions, and recent tanning or excessive sun exposure. These factors may affect treatment timing or suitability.",
+      "## Common Types of Laser Treatments",
+      "Although every clinic offers different technologies, most laser treatments fall into several categories.",
+      "**Pigment Lasers** target excess melanin and are commonly used for sunspots, freckles, age spots and some tattoo pigments. Results often require multiple sessions depending on pigment depth.",
+      "**Fractional Lasers** create microscopic treatment zones while leaving surrounding skin intact, encouraging natural healing. Common indications include acne scars, surgical scars, fine wrinkles, uneven texture and enlarged pores, with collagen remodelling continuing for several months after treatment.",
+      "**Hair Removal Lasers** selectively damage hair follicles during the active growth phase. Because hair grows in cycles, multiple treatment sessions are usually required to achieve long-term hair reduction.",
+      "**Vascular Lasers** target abnormal blood vessels and may help improve facial redness, spider veins, rosacea and certain birthmarks.",
+      "## Is Laser Treatment Painful?",
+      "Most patients describe laser treatments as causing mild discomfort rather than severe pain. The sensation varies depending on treatment area, laser type, energy settings and individual pain tolerance. Cooling systems or topical anaesthetic creams are often used to improve comfort.",
+      "## How Many Sessions Will I Need?",
+      "Laser treatment is usually a course rather than a single appointment. The number of sessions depends on the condition being treated, its severity, and how your skin responds. For many concerns, improvement occurs gradually as collagen remodelling and skin renewal continue over weeks to months.",
+      "## Possible Side Effects",
+      "Laser treatments performed by trained medical professionals are generally safe, but temporary side effects may include redness, mild swelling, dryness, temporary darkening of pigmented spots and mild peeling. Less common complications include infection, prolonged pigmentation changes, blistering or scarring, particularly if aftercare instructions are not followed.",
+      "## Preparing for Your Appointment",
+      "Your dermatologist may recommend avoiding excessive sun exposure for several weeks beforehand, wearing sunscreen daily, discontinuing certain skincare products such as retinoids if advised, informing your doctor about all medications and supplements, and avoiding tanning beds. Always follow the individualised instructions provided during your consultation.",
+      "## The Importance of a Medical Consultation",
+      "A thorough consultation helps ensure treatment is both safe and effective. During your assessment, your dermatologist evaluates skin type, pigmentation, texture, medical history, current skincare routine, lifestyle factors, expected recovery time and treatment goals. Sometimes laser treatment is combined with other therapies to achieve better overall results.",
+      "## Final Thoughts",
+      "Laser treatments have become valuable tools in modern dermatology, but successful outcomes depend on selecting the appropriate treatment for the right patient. At Glow Skin Clinic, every laser treatment begins with a comprehensive medical consultation so that recommendations are based on your skin — not on trends or one-size-fits-all solutions.",
     ],
     date: "2025-03-14",
     author: "Dr. Apeksha Herath",
@@ -514,9 +608,28 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "A look at what a typical rejuvenation protocol involves, from the initial assessment through to aftercare.",
     content: [
-      "Skin rejuvenation is rarely a single treatment — it's a structured course built around your skin's response over time.",
-      "Your first session usually begins with a full skin assessment, followed by a gentle introductory protocol to gauge sensitivity and set a realistic timeline for visible results.",
-      "Most patients see a gradual improvement in tone and texture over several weeks, with results building session by session rather than overnight.",
+      "Healthy, youthful-looking skin is influenced by many factors including genetics, sun exposure, lifestyle, hormones, and the natural ageing process. As collagen production gradually decreases with age, the skin may begin to show fine lines, uneven texture, enlarged pores, pigmentation changes, and reduced firmness.",
+      "Skin rejuvenation treatments aim to improve overall skin quality by stimulating natural repair processes rather than creating dramatic overnight changes. Understanding what happens during your first appointment can help you feel informed and confident before beginning treatment.",
+      "## What Is Skin Rejuvenation?",
+      "Skin rejuvenation refers to a range of medical and cosmetic procedures designed to improve skin tone, texture, elasticity, hydration, fine lines, pigmentation, acne scars and overall skin health. Treatment recommendations vary depending on each patient's skin condition and goals.",
+      "## Your Consultation Comes First",
+      "Your first visit is usually longer than future appointments because it focuses on assessment and treatment planning. Your dermatologist will evaluate your medical history, current skincare products, previous treatments, allergies, sun exposure habits, lifestyle, medications and pregnancy status when relevant. Your skin is then examined under appropriate lighting to assess pigmentation, oil production, hydration, texture and signs of ageing.",
+      "## Setting Realistic Expectations",
+      "Many patients expect immediate transformation after one treatment. In reality, skin rejuvenation is a gradual process. Collagen remodelling takes time, and depending on the procedure, visible improvement may continue for several weeks or months after treatment. Long-term improvement is usually achieved through a planned treatment course combined with good skincare and sun protection.",
+      "## Your First Treatment",
+      "Depending on your assessment, your doctor may recommend a gentle introductory treatment to evaluate how your skin responds. The session may include skin cleansing, photography for treatment comparison, topical numbing cream if required, the treatment procedure itself, and cooling and soothing products afterward. The exact process depends on the selected treatment.",
+      "## What You May Experience Afterwards",
+      "Temporary effects are common and generally improve within several days. These may include mild redness, a warm sensation, slight swelling, dryness and tightness. Your doctor will explain what is expected and when to seek medical advice if symptoms are unusual.",
+      "## Aftercare Matters",
+      "Proper aftercare supports healing and helps reduce complications. Patients are commonly advised to use a gentle cleanser, apply moisturiser regularly, wear broad-spectrum sunscreen SPF 30 or higher every day, avoid excessive heat and direct sun exposure, and avoid picking or exfoliating treated skin until healed. Follow your dermatologist's specific instructions, as recommendations differ between procedures.",
+      "## Maintaining Results",
+      "Skin rejuvenation is not a one-time event. Healthy skin is maintained through daily sunscreen, consistent skincare, healthy nutrition, adequate sleep, avoiding smoking and regular follow-up appointments. Maintenance treatments may be recommended depending on your skin goals.",
+      "## Frequently Asked Questions",
+      "**Will I need time off work?** Some treatments have little to no downtime, while others may require several days of recovery.",
+      "**Is skin rejuvenation suitable for everyone?** Most healthy adults can benefit from some form of skin rejuvenation, but treatment choice depends on individual assessment, skin type and medical history.",
+      "**When will I see results?** Some treatments produce an early improvement in skin brightness, while collagen-stimulating treatments often continue improving over several months.",
+      "## Final Thoughts",
+      "The first skin rejuvenation session is the beginning of a personalised treatment journey. Rather than aiming for instant change, the focus is on gradually improving skin quality in a safe, evidence-based manner. Working closely with your dermatologist and following recommended aftercare can help you achieve healthier, more resilient skin over time.",
     ],
     date: "2025-05-02",
     author: "Dr. Apeksha Herath",
@@ -529,9 +642,64 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Simple preparation steps that make a real difference to comfort, downtime and results.",
     content: [
-      "Preparing your skin properly before a treatment can noticeably improve both comfort during the session and how quickly you see results.",
-      "Avoid sun exposure and active retinoid products in the days leading up to your appointment, and arrive with clean, product-free skin.",
-      "Most importantly, be upfront with your doctor about any medications, allergies or recent procedures — this shapes the entire protocol.",
+      "Whether you are planning laser therapy, skin rejuvenation, chemical peels, or another aesthetic procedure, preparing your skin beforehand can improve comfort, reduce the risk of complications, and support optimal healing.",
+      "Although preparation varies depending on the treatment, these five general recommendations are helpful for many patients.",
+      "## 1. Protect Your Skin From the Sun",
+      "Recent sun exposure increases skin sensitivity and may raise the risk of pigmentation changes after certain procedures. For several weeks before treatment:",
+      "- Wear broad-spectrum sunscreen (SPF 30 or higher)",
+      "- Wear hats when outdoors",
+      "- Avoid tanning beds",
+      "- Minimise prolonged direct sun exposure",
+      "Sun protection should continue after treatment as well.",
+      "## 2. Review Your Skincare Routine",
+      "Some skincare ingredients may increase skin sensitivity. Your dermatologist may advise temporarily stopping products containing:",
+      "- Retinoids",
+      "- Retinol",
+      "- Tretinoin",
+      "- Strong exfoliating acids (AHAs/BHAs)",
+      "- Benzoyl peroxide",
+      "Only discontinue products if instructed by your healthcare provider.",
+      "## 3. Tell Your Doctor About Your Medical History",
+      "A full medical history helps ensure safe treatment. Be sure to mention:",
+      "- Current medications",
+      "- Pregnancy or breastfeeding",
+      "- Allergies",
+      "- Cold sore history",
+      "- Previous cosmetic procedures",
+      "- Recent isotretinoin treatment",
+      "- Tendency to develop keloid scars",
+      "Providing complete information allows your doctor to tailor your treatment safely.",
+      "## 4. Arrive With Clean Skin",
+      "On the day of treatment:",
+      "- Remove makeup",
+      "- Avoid heavy moisturisers if instructed",
+      "- Avoid perfume on treatment areas",
+      "- Remove sunscreen immediately before treatment if requested",
+      "Clean skin helps reduce contamination and allows better treatment accuracy.",
+      "## 5. Understand the Procedure",
+      "Every treatment has benefits, limitations, risks, and recovery expectations. Before proceeding, ensure you understand:",
+      "- Expected results",
+      "- Number of sessions required",
+      "- Recovery time",
+      "- Possible side effects",
+      "- Cost of ongoing treatment",
+      "- Home care instructions",
+      "Don't hesitate to ask questions during your consultation. Informed patients are better prepared to participate in their treatment plan.",
+      "## Common Questions Patients Ask",
+      "**Can I exercise after treatment?** Depending on the procedure, your doctor may recommend avoiding strenuous exercise for 24–48 hours to reduce irritation and swelling.",
+      "**Should I stop my medications?** Never stop prescription medications unless specifically advised by your prescribing doctor or dermatologist.",
+      "**Can I wear makeup afterwards?** This depends on the treatment. Some procedures allow makeup the following day, while others require several days of healing.",
+      "## Why Preparation Matters",
+      "Good preparation helps:",
+      "- Reduce irritation",
+      "- Support faster healing",
+      "- Lower the chance of complications",
+      "- Improve treatment consistency",
+      "- Enhance overall patient experience",
+      "Although preparation cannot guarantee results, it creates the best possible conditions for successful treatment.",
+      "## Final Thoughts",
+      "Aesthetic treatments work best when they are approached as part of a comprehensive skincare plan rather than isolated procedures. Careful preparation, open communication with your dermatologist, and following aftercare advice all contribute to safe and satisfying outcomes.",
+      "At Glow Skin Clinic, every treatment begins with a detailed consultation so that recommendations are based on your skin's unique needs and medical history, helping ensure that your treatment plan is both safe and appropriate.",
     ],
     date: "2025-06-20",
     author: "Dr. Apeksha Herath",

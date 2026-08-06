@@ -28,6 +28,43 @@ function formatDate(dateStr: string) {
   });
 }
 
+function renderInline(text: string) {
+  const parts = text.split(/(\*\*.+?\*\*)/g);
+  return parts.map((part, i) =>
+    part.startsWith("**") && part.endsWith("**") ? (
+      <strong key={i} className="font-semibold text-foreground">
+        {part.slice(2, -2)}
+      </strong>
+    ) : (
+      <span key={i}>{part}</span>
+    ),
+  );
+}
+
+type Block =
+  | { type: "heading"; text: string }
+  | { type: "list"; items: string[] }
+  | { type: "paragraph"; text: string };
+
+function groupContentBlocks(content: string[]): Block[] {
+  const blocks: Block[] = [];
+  for (const line of content) {
+    if (line.startsWith("## ")) {
+      blocks.push({ type: "heading", text: line.slice(3) });
+    } else if (line.startsWith("- ")) {
+      const last = blocks[blocks.length - 1];
+      if (last?.type === "list") {
+        last.items.push(line.slice(2));
+      } else {
+        blocks.push({ type: "list", items: [line.slice(2)] });
+      }
+    } else {
+      blocks.push({ type: "paragraph", text: line });
+    }
+  }
+  return blocks;
+}
+
 function BlogDetailPage() {
   const { slug } = Route.useParams();
   const post = findBlogPostBySlug(slug);
@@ -84,9 +121,31 @@ function BlogDetailPage() {
 
       <Reveal delay={0.15}>
         <article className="mx-auto max-w-2xl space-y-6 px-5 py-16 text-[15px] leading-relaxed text-foreground/90 sm:px-8">
-          {post.content.map((paragraph, i) => (
-            <p key={i}>{paragraph}</p>
-          ))}
+          {groupContentBlocks(post.content).map((block, i) => {
+            if (block.type === "heading") {
+              return (
+                <h2
+                  key={i}
+                  className="pt-4 font-[family-name:var(--font-display)] text-2xl leading-snug text-foreground sm:text-[28px]"
+                >
+                  {block.text}
+                </h2>
+              );
+            }
+            if (block.type === "list") {
+              return (
+                <ul key={i} className="list-none space-y-2.5 pl-1">
+                  {block.items.map((item, j) => (
+                    <li key={j} className="flex gap-3">
+                      <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-gold" />
+                      <span>{renderInline(item)}</span>
+                    </li>
+                  ))}
+                </ul>
+              );
+            }
+            return <p key={i}>{renderInline(block.text)}</p>;
+          })}
         </article>
       </Reveal>
 
