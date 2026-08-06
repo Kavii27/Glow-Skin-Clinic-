@@ -40,6 +40,7 @@ export function WhyChooseSection() {
       <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
         {whyChoose.map((item, i) => {
           const Icon = icons[i % icons.length];
+          if (!Icon) return null;
           return (
             <Reveal key={item} delay={i * 0.05}>
               <div className="group flex h-full flex-col items-start gap-4 rounded-2xl border border-border/70 bg-card p-6 shadow-soft transition-all duration-500 hover:-translate-y-1 hover:border-gold/60 hover:shadow-luxe">
