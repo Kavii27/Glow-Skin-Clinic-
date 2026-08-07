@@ -1056,36 +1056,41 @@ export const milestones = [
     year: "2012",
     title: "Bachelor of Medicine & Bachelor of Surgery (MBBS)",
     description:
-      "University of Peradeniya · A medical degree providing comprehensive training in clinical medicine, surgery, patient care, and evidence-based medical practice — the foundation of Dr. Herath's approach to safe, ethical aesthetic medicine.",
+      "Dr. Herath's medical career began at the University of Peradeniya, one of Sri Lanka's oldest and most respected medical faculties. Over the course of her degree she trained across internal medicine, surgery, dermatology, pharmacology and patient care, sitting clinical rotations in public and private hospitals across the country. This foundation gave her a rigorous, evidence-based approach to diagnosis and treatment planning — a discipline she carries into every aesthetic consultation, where medical assessment always comes before any procedure is recommended. It is this grounding in general medicine, rather than a purely cosmetic background, that shapes her cautious, safety-first philosophy today.",
     image: "/doctor/mbbs-degree-certificate.jpg",
+    aspect: "aspect-[3/4]",
   },
   {
     year: "Training",
     title: "Advanced Clinical & Injectable Training",
     description:
-      "Hands-on training alongside a team of experienced aesthetic physicians, refining injectable technique, facial assessment, and complication prevention.",
+      "Following her medical degree, Dr. Herath undertook an extended period of hands-on clinical training alongside a team of experienced aesthetic physicians. This apprenticeship-style training focused on live-patient injection technique, facial assessment under supervision, sterile procedure protocols, and — critically — how to recognise and manage complications before they become serious. Working directly under senior practitioners allowed her to build the kind of practical judgement that cannot be taught from a textbook: reading individual facial anatomy, adjusting technique in real time, and understanding when a patient is not a suitable candidate for a given treatment.",
     image: "/doctor/clinical-training-batch.jpg",
+    aspect: "aspect-video",
   },
   {
     year: "2024",
     title: "Fellowship in Cosmetology & Aesthetic Medicine (FCAM)",
     description:
-      "Advanced postgraduate fellowship covering cosmetic dermatology, facial rejuvenation, injectables, laser medicine, and modern non-surgical aesthetic treatments, completed with distinction.",
+      "The Fellowship in Cosmetology & Aesthetic Medicine is a structured postgraduate programme covering the full breadth of modern aesthetic practice — cosmetic dermatology, facial rejuvenation, chemical peels, microneedling, laser and light-based therapies, and non-surgical body contouring. The curriculum combines academic study with supervised clinical practice, culminating in assessed casework. Dr. Herath completed the fellowship with distinction, deepening her understanding of skin physiology, the ageing process, and how to sequence treatments over time for results that look natural rather than artificial.",
     image: "/doctor/fcam-fellowship-diploma.jpg",
+    aspect: "aspect-[3/4]",
   },
   {
     year: "2024",
     title: "Receiving the FCAM Certification",
     description:
-      "Presented with her Fellowship in Cosmetology & Aesthetic Medicine certificate by the institute's faculty.",
+      "Dr. Herath was formally presented with her Fellowship in Cosmetology & Aesthetic Medicine certificate by the institute's faculty, marking the completion of her postgraduate fellowship. The certification is recognised as a benchmark of advanced competency in aesthetic medicine, requiring not only theoretical examination but demonstrated clinical skill across a range of real patient cases — reflecting a standard of training well beyond a short weekend course.",
     image: "/doctor/fcam-certificate-presentation.jpg",
+    aspect: "aspect-video",
   },
   {
     year: "2025",
     title: "Masters Course in Advanced Facial Injectables (MAFI)",
     description:
-      "An intensive advanced programme focused on facial anatomy, advanced injection techniques, facial harmonisation, patient assessment, and complication prevention.",
+      "The Masters Course in Advanced Facial Injectables is an intensive, hands-on programme focused on the finer points of injectable medicine: detailed facial anatomy including vascular danger zones, advanced dermal filler and botulinum toxin techniques, whole-face harmonisation planning, and complication prevention and management. This training equips Dr. Herath to plan injectable treatments holistically — considering how the eyes, cheeks, lips, jawline and chin work together — rather than treating each area in isolation, and to respond quickly and correctly should a rare complication arise.",
     image: "/doctor/mafi-masters-certificate.jpg",
+    aspect: "aspect-[3/4]",
   },
 ];
 
