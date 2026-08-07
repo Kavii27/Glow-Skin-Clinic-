@@ -91,7 +91,7 @@ function BlogDetailPage() {
   return (
     <>
       <section className="relative pt-36 pb-16 sm:pt-44">
-        <div className="mx-auto max-w-3xl px-5 sm:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal>
             <Link
               to="/blog"
@@ -112,7 +112,7 @@ function BlogDetailPage() {
       </section>
 
       <Reveal delay={0.1}>
-        <div className="mx-auto max-w-4xl px-5 sm:px-8">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="overflow-hidden rounded-2xl shadow-luxe">
             <img src={post.image} alt={post.title} className="aspect-16/9 w-full object-cover" />
           </div>
@@ -120,7 +120,7 @@ function BlogDetailPage() {
       </Reveal>
 
       <Reveal delay={0.15}>
-        <article className="mx-auto max-w-2xl space-y-6 px-5 py-16 text-[15px] leading-relaxed text-foreground/90 sm:px-8">
+        <article className="mx-auto max-w-7xl space-y-6 px-5 py-16 text-[15px] leading-relaxed text-foreground/90 sm:px-8">
           {groupContentBlocks(post.content).map((block, i) => {
             if (block.type === "heading") {
               return (
