@@ -9,8 +9,14 @@ import ba1Before from "@/assets/ba-1-before.jpg";
 import ba1After from "@/assets/ba-1-after.jpg";
 import ba2Before from "@/assets/ba-2-before.jpg";
 import ba2After from "@/assets/ba-2-after.jpg";
-import clinicInterior from "@/assets/clinic-interior.jpg";
-import doctorPortrait from "@/assets/doctor-portrait.jpg";
+import galeryImg1 from "@/assets/galery-img1.jpeg";
+import galeryImg2 from "@/assets/galery-img2.jpeg";
+import galeryImg3 from "@/assets/galery-img3.jpeg";
+import galeryImg4 from "@/assets/galery-img4.jpeg";
+import galeryImg5 from "@/assets/galery-img5.jpeg";
+import galeryImg6 from "@/assets/galery-img6.jpeg";
+import galeryImg7 from "@/assets/galery-img7.jpeg";
+import galeryImg8 from "@/assets/galery-img8.jpeg";
 import placeholderResult from "@/assets/placeholder-result.jpg";
 import antiAgingResult from "@/assets/results/anti-aging-before-after.jpg";
 import skinWhiteningResult from "@/assets/results/skin-whitening-result.jpg";
@@ -1160,18 +1166,17 @@ export const faqs: FaqItem[] = [
 export type GalleryImage = {
   src: string;
   alt: string;
-  category: "Clinic" | "Treatments" | "Results";
 };
 
 export const galleryImages: GalleryImage[] = [
-  { src: clinicInterior, alt: "Reception and waiting lounge", category: "Clinic" },
-  { src: rejuvenation, alt: "Skin rejuvenation treatment room", category: "Treatments" },
-  { src: laser, alt: "Laser treatment suite", category: "Treatments" },
-  { src: antiaging, alt: "Anti-aging consultation room", category: "Treatments" },
-  { src: body, alt: "Body care treatment suite", category: "Treatments" },
-  { src: ba1After, alt: "Skin rejuvenation result", category: "Results" },
-  { src: ba2After, alt: "Laser treatment result", category: "Results" },
-  { src: doctorPortrait, alt: "Dr. Apeksha Herath", category: "Clinic" },
+  { src: galeryImg1, alt: "Glow Skin Clinic gallery image 1" },
+  { src: galeryImg2, alt: "Glow Skin Clinic gallery image 2" },
+  { src: galeryImg3, alt: "Glow Skin Clinic gallery image 3" },
+  { src: galeryImg4, alt: "Glow Skin Clinic gallery image 4" },
+  { src: galeryImg5, alt: "Glow Skin Clinic gallery image 5" },
+  { src: galeryImg6, alt: "Glow Skin Clinic gallery image 6" },
+  { src: galeryImg7, alt: "Glow Skin Clinic gallery image 7" },
+  { src: galeryImg8, alt: "Glow Skin Clinic gallery image 8" },
 ];
 
 export type BlogPost = {

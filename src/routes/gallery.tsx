@@ -24,14 +24,8 @@ export const Route = createFileRoute("/gallery")({
   component: GalleryPage,
 });
 
-const categories = ["All", "Clinic", "Treatments", "Results"] as const;
-
 function GalleryPage() {
-  const [filter, setFilter] = useState<(typeof categories)[number]>("All");
   const [active, setActive] = useState<GalleryImage | null>(null);
-
-  const filtered =
-    filter === "All" ? galleryImages : galleryImages.filter((img) => img.category === filter);
 
   return (
     <>
@@ -42,27 +36,8 @@ function GalleryPage() {
       />
 
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24">
-        <Reveal>
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                onClick={() => setFilter(cat)}
-                className={`rounded-full border px-6 py-2.5 text-[11px] tracking-[0.22em] uppercase transition-colors duration-300 ${
-                  filter === cat
-                    ? "border-gold bg-gold-gradient text-primary-foreground"
-                    : "border-border/70 text-muted-foreground hover:border-gold/60 hover:text-foreground"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </Reveal>
-
-        <div className="mt-14 columns-1 gap-6 sm:columns-2 lg:columns-3">
-          {filtered.map((img, i) => (
+        <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
+          {galleryImages.map((img, i) => (
             <Reveal key={img.src} delay={(i % 6) * 0.06}>
               <button
                 type="button"
