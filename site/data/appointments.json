@@ -1,0 +1,24 @@
+[
+  {
+    "id": "2026-08-26-11:00-13:00-6ztq8wp",
+    "name": "Kaveesha Sandeeepani",
+    "phone": "0742708527",
+    "email": "senukikiyara027@gmail.com",
+    "treatment": "Anti-Aging Treatment",
+    "message": "he",
+    "date": "2026-08-26",
+    "slot": "11:00-13:00",
+    "createdAt": "2026-08-07T09:57:02.236Z"
+  },
+  {
+    "id": "2026-08-15-15:00-17:00-dul3wl0",
+    "name": "Jayakodige Kaveesha Sandeeepani Fernando",
+    "phone": "0713608527",
+    "email": "kaveeshasandeepani027@gmail.com",
+    "treatment": "Diode Laser",
+    "message": "he",
+    "date": "2026-08-15",
+    "slot": "15:00-17:00",
+    "createdAt": "2026-08-07T09:57:25.846Z"
+  }
+]
