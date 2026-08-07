@@ -12,6 +12,31 @@ import ba2After from "@/assets/ba-2-after.jpg";
 import clinicInterior from "@/assets/clinic-interior.jpg";
 import doctorPortrait from "@/assets/doctor-portrait.jpg";
 import placeholderResult from "@/assets/placeholder-result.jpg";
+import antiAgingResult from "@/assets/results/anti-aging-before-after.jpg";
+import skinWhiteningResult from "@/assets/results/skin-whitening-result.jpg";
+import prpPrfResult from "@/assets/results/prp-prf-result.jpg";
+import microneedlingResult from "@/assets/results/microneedling-result.jpg";
+import hydraFacialResult from "@/assets/results/hydra-facial-result.jpg";
+import chemicalPeelingResult from "@/assets/results/chemical-peeling-result.jpg";
+import carbonFacialResult from "@/assets/results/carbon-facial-result.jpg";
+import picoLaserResult from "@/assets/results/pico-laser-treatment.jpg";
+import iplPhotofacialResult from "@/assets/results/ipl-photofacial-result.jpg";
+import laserHairRemovalResult from "@/assets/results/Laser-hair-removal-result.jpeg";
+import pigmentationResult from "@/assets/results/pigmentation-result.jpg";
+import hairLossResult from "@/assets/results/hair-loss-results.jpg";
+import stretchMarksResult from "@/assets/results/stretch-marks-results.jpg";
+import cavitationResult from "@/assets/results/80k-cavitation-result.jpg";
+import collagenResult from "@/assets/results/Collagen-result.jpeg";
+import dryScalyUnevenResult from "@/assets/results/dry-scaly-uneven-result.jpeg";
+import kneeJointResult from "@/assets/results/knee-joint-results.jpeg";
+import microdermabrasionResult from "@/assets/results/Microdermabrasion-result.jpeg";
+import earPiercingResult from "@/assets/results/ears-piersing-result.jpeg";
+import wartLumpsResult from "@/assets/results/wart-lumps-results.jpeg";
+import botoxResult from "@/assets/results/botox-results.jpeg";
+import facialResult from "@/assets/results/facial-results.jpeg";
+import hifuResult from "@/assets/results/hifu-results.jpeg";
+import lipResult from "@/assets/results/lip-results.jpeg";
+import threadResult from "@/assets/results/thread-results.jpeg";
 
 // TEMPORARY placeholder image used for every treatment's Before/After photo.
 // It's a single combined image showing "before" on the left and "after" on the
@@ -112,7 +137,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Avoid strong actives (retinoids, acids) until skin has settled",
           "Avoid direct sun and saunas for 24–48 hours",
         ],
-        resultImage: placeholderResult,
+        resultImage: antiAgingResult,
       },
       {
         name: "Skin Whitening & Rejuvenation",
@@ -144,7 +169,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Follow the prescribed home-care regimen consistently",
           "Report any unusual irritation to your doctor promptly",
         ],
-        resultImage: placeholderResult,
+        resultImage: skinWhiteningResult,
       },
       {
         name: "PRP / PRF Treatment",
@@ -176,7 +201,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Keep skin clean and apply recommended soothing products",
           "Use sunscreen daily during the healing period",
         ],
-        resultImage: placeholderResult,
+        resultImage: prpPrfResult,
       },
       {
         name: "Microneedling",
@@ -208,7 +233,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Avoid sun exposure and apply SPF 30+ once skin has settled",
           "Skip active ingredients (retinoids, acids) for a few days",
         ],
-        resultImage: placeholderResult,
+        resultImage: microneedlingResult,
       },
       {
         name: "Hydrafacial",
@@ -238,7 +263,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Keep skin hydrated and apply SPF 30+ the following day",
           "Avoid harsh exfoliants for 24 hours",
         ],
-        resultImage: placeholderResult,
+        resultImage: hydraFacialResult,
       },
       {
         name: "Chemical Peeling",
@@ -268,7 +293,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Use only the gentle, prescribed skincare during recovery",
           "Avoid sun exposure and heat for several days",
         ],
-        resultImage: placeholderResult,
+        resultImage: chemicalPeelingResult,
       },
       {
         name: "Microdermabrasion (MDA)",
@@ -297,7 +322,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Keep skin moisturised",
           "Avoid strong actives for 24 hours",
         ],
-        resultImage: placeholderResult,
+        resultImage: microdermabrasionResult,
       },
       {
         name: "Carbon Facial",
@@ -325,7 +350,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Avoid harsh exfoliants for 24–48 hours",
           "Keep skin hydrated",
         ],
-        resultImage: placeholderResult,
+        resultImage: carbonFacialResult,
       },
       {
         name: "Special Collagen Treatment",
@@ -353,7 +378,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Keep the treated area clean",
           "Follow the individualised aftercare plan from your doctor",
         ],
-        resultImage: placeholderResult,
+        resultImage: collagenResult,
       },
       {
         name: "Dry / Scaly & Uneven Skin Treatment",
@@ -381,7 +406,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Avoid harsh cleansers, hot water and exfoliation",
           "Apply moisturiser and SPF consistently",
         ],
-        resultImage: placeholderResult,
+        resultImage: dryScalyUnevenResult,
       },
     ],
   },
@@ -420,7 +445,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Avoid picking at any treated spots",
           "Follow your doctor's individualised skincare guidance",
         ],
-        resultImage: placeholderResult,
+        resultImage: picoLaserResult,
       },
       {
         name: "IPL Photofacial",
@@ -449,7 +474,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Avoid sun exposure and tanning beds for several weeks",
           "Use gentle, soothing skincare for a few days",
         ],
-        resultImage: placeholderResult,
+        resultImage: iplPhotofacialResult,
       },
       {
         name: "Diode Laser",
@@ -505,7 +530,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Avoid plucking or waxing between treatments",
           "Avoid hot showers, saunas and vigorous exercise for 24 hours",
         ],
-        resultImage: placeholderResult,
+        resultImage: laserHairRemovalResult,
       },
       {
         name: "Pigmentation Treatment",
@@ -534,7 +559,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Avoid direct sun and tanning beds",
           "Continue prescribed topicals as directed",
         ],
-        resultImage: placeholderResult,
+        resultImage: pigmentationResult,
       },
     ],
   },
@@ -571,7 +596,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Avoid strenuous exercise for 24 hours",
           "Avoid rubbing or massaging the treated area",
         ],
-        resultImage: placeholderResult,
+        resultImage: botoxResult,
       },
       {
         name: "Facial Fillers & Threads",
@@ -600,7 +625,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Avoid strenuous exercise, alcohol and extreme heat for 24–48 hours",
           "Sleep with your head slightly elevated the first night",
         ],
-        resultImage: placeholderResult,
+        resultImage: facialResult,
       },
       {
         name: "Thread Lift",
@@ -629,7 +654,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Sleep on your back with head elevated for the first few nights",
           "Avoid strenuous exercise and saunas for at least a week",
         ],
-        resultImage: placeholderResult,
+        resultImage: threadResult,
       },
       {
         name: "HIFU Lifting",
@@ -657,7 +682,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Apply SPF 30+ daily",
           "Avoid extreme heat and strenuous exercise for 24–48 hours",
         ],
-        resultImage: placeholderResult,
+        resultImage: hifuResult,
       },
       {
         name: "Lip Blushing / Dark Lip Treatment",
@@ -686,7 +711,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Avoid spicy food, hot drinks and excessive lip movement for a few days",
           "Avoid sun exposure and swimming until fully healed",
         ],
-        resultImage: placeholderResult,
+        resultImage: lipResult,
       },
     ],
   },
@@ -722,7 +747,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Avoid strenuous exercise on treatment day",
           "Follow the prescribed home-care routine consistently",
         ],
-        resultImage: placeholderResult,
+        resultImage: hairLossResult,
       },
       {
         name: "Stretch Marks & Old Scars",
@@ -750,7 +775,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Avoid sun exposure on the treated area",
           "Avoid tight clothing rubbing the area for a few days",
         ],
-        resultImage: placeholderResult,
+        resultImage: stretchMarksResult,
       },
       {
         name: "80K Cavitation — Fat Reduction",
@@ -778,7 +803,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Light activity is encouraged between sessions",
           "Maintain a balanced diet to support and extend results",
         ],
-        resultImage: placeholderResult,
+        resultImage: cavitationResult,
       },
       {
         name: "PRP / PRF — Body & Knee Joints",
@@ -806,7 +831,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Avoid strenuous exercise for 48 hours",
           "Apply cold compress if advised for swelling",
         ],
-        resultImage: placeholderResult,
+        resultImage: kneeJointResult,
       },
       {
         name: "Acne & Acne Scar Treatment",
@@ -863,7 +888,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Avoid picking at any scab that forms",
           "Apply SPF once healed to reduce pigment changes",
         ],
-        resultImage: placeholderResult,
+        resultImage: wartLumpsResult,
       },
       {
         name: "Ear & Nose Piercing",
@@ -890,7 +915,7 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Avoid touching the area with unwashed hands",
           "Avoid swimming pools and sea water until fully healed",
         ],
-        resultImage: placeholderResult,
+        resultImage: earPiercingResult,
       },
     ],
   },
