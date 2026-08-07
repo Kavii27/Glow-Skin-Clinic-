@@ -11,6 +11,17 @@ import ba2Before from "@/assets/ba-2-before.jpg";
 import ba2After from "@/assets/ba-2-after.jpg";
 import clinicInterior from "@/assets/clinic-interior.jpg";
 import doctorPortrait from "@/assets/doctor-portrait.jpg";
+import placeholderResult from "@/assets/placeholder-result.jpg";
+
+// TEMPORARY placeholder image used for every treatment's Before/After photo.
+// It's a single combined image showing "before" on the left and "after" on the
+// right. To add a real result photo for a specific treatment, import the image
+// at the top of this file (like the other assets above) and pass it as that
+// treatment's `resultImage` value instead of `placeholderResult`.
+// Example:
+//   import antiAgingResult from "@/assets/results/anti-aging-before-after.jpg";
+//   ... then in the "Anti-Aging Treatment" object below:
+//   resultImage: antiAgingResult,
 
 export const CLINIC = {
   name: "Glow Skin Clinic",
@@ -41,6 +52,18 @@ export type Treatment = {
   detail: string;
   duration: string;
   image: string;
+  /** Roughly how many sessions are typically recommended, e.g. "3–6 sessions, spaced 3–4 weeks apart". */
+  sessions?: string;
+  /** Key benefits / what the treatment addresses. */
+  benefits?: string[];
+  /** Who this treatment is generally suitable for. */
+  idealFor?: string[];
+  /** Possible/expected side effects, shown with a medical-safety framing. */
+  sideEffects?: string[];
+  /** Aftercare guidance. */
+  aftercare?: string[];
+  /** Combined before/after result photo (one image showing both). Defaults to a placeholder — replace per-treatment when a real photo is available. */
+  resultImage?: string;
 };
 
 export type TreatmentCategory = {
@@ -65,6 +88,31 @@ export const treatmentCategories: TreatmentCategory[] = [
           "A tailored combination of collagen-stimulating therapies designed around your skin's biology, delivering a naturally rested and lifted appearance over a graded course.",
         duration: "45–60 min",
         image: "/treatments/anti-aging-treatment.jpg",
+        sessions: "Course of 4–6 sessions, spaced 3–4 weeks apart, with periodic maintenance",
+        benefits: [
+          "Softens fine lines and expression wrinkles",
+          "Stimulates natural collagen and elastin production",
+          "Improves firmness, tone and overall radiance",
+          "Gradual, natural-looking results with no surgery",
+        ],
+        idealFor: [
+          "Early to moderate signs of skin ageing",
+          "Anyone wanting a preventative, medically guided routine",
+          "Patients seeking natural results rather than a dramatic change",
+        ],
+        sideEffects: [
+          "Temporary redness or warmth immediately after treatment",
+          "Mild swelling or sensitivity for 24–48 hours",
+          "Occasional dryness or light peeling depending on the protocol used",
+          "Rare: irritation or breakout in sensitive skin",
+        ],
+        aftercare: [
+          "Apply broad-spectrum SPF 30+ daily",
+          "Use a gentle cleanser and moisturiser for a few days after",
+          "Avoid strong actives (retinoids, acids) until skin has settled",
+          "Avoid direct sun and saunas for 24–48 hours",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Skin Whitening & Rejuvenation",
@@ -73,6 +121,30 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Physician-formulated brightening protocols targeting melanin activity and dullness, combining topical actives, in-clinic infusions and light-based correction.",
         duration: "40 min",
         image: "/treatments/skin-whitening-and-rejuvenation.jpg",
+        sessions: "4–8 sessions, typically every 2–3 weeks",
+        benefits: [
+          "Evens out patchy or dull skin tone",
+          "Reduces the appearance of dark spots and pigmentation",
+          "Restores a brighter, healthier-looking complexion",
+          "Combines topical actives with in-clinic treatment for faster results",
+        ],
+        idealFor: [
+          "Dull, uneven or tired-looking skin",
+          "Mild pigmentation or sun-related dullness",
+          "Anyone wanting a gradual, medically supervised brightening plan",
+        ],
+        sideEffects: [
+          "Mild redness or tightness after treatment",
+          "Temporary increased sun sensitivity",
+          "Rare: irritation if actives are introduced too quickly",
+        ],
+        aftercare: [
+          "Daily broad-spectrum sunscreen is essential",
+          "Avoid unprotected sun exposure between sessions",
+          "Follow the prescribed home-care regimen consistently",
+          "Report any unusual irritation to your doctor promptly",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "PRP / PRF Treatment",
@@ -81,6 +153,30 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Platelet-rich plasma and fibrin concentrates are prepared from your own blood and reintroduced to stimulate collagen, improve texture and revive tired skin.",
         duration: "60 min",
         image: "/treatments/prp-prf-treatment.jpg",
+        sessions: "3–4 sessions, spaced 4–6 weeks apart",
+        benefits: [
+          "Uses your own platelets, so it's naturally biocompatible",
+          "Stimulates collagen for firmer, more even-textured skin",
+          "Improves tired, dull or thinning skin",
+          "Often combined with microneedling for enhanced absorption",
+        ],
+        idealFor: [
+          "Early skin ageing, dullness or fine lines",
+          "Patients who prefer a treatment using their own biological material",
+          "Skin that needs a regenerative boost after sun damage or stress",
+        ],
+        sideEffects: [
+          "Redness, minor swelling and pinpoint bruising at injection sites",
+          "Mild tenderness for 1–2 days",
+          "Rare: infection if aftercare instructions are not followed",
+        ],
+        aftercare: [
+          "Avoid makeup for 12–24 hours",
+          "Avoid strenuous exercise, sauna and alcohol for 24 hours",
+          "Keep skin clean and apply recommended soothing products",
+          "Use sunscreen daily during the healing period",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Microneedling",
@@ -89,6 +185,30 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Precision micro-channels trigger the skin's repair cascade, refining pores, scarring and fine lines while enhancing absorption of medical serums.",
         duration: "45 min",
         image: "/treatments/microneedling.jpg",
+        sessions: "3–6 sessions, spaced 3–4 weeks apart",
+        benefits: [
+          "Refines pore size and improves overall texture",
+          "Softens acne scarring and fine lines",
+          "Boosts absorption of medical-grade serums",
+          "Stimulates natural collagen production over time",
+        ],
+        idealFor: [
+          "Enlarged pores, acne scarring or uneven texture",
+          "Fine lines and early collagen loss",
+          "Most skin types, with settings adjusted individually",
+        ],
+        sideEffects: [
+          "Redness and a warm, sunburn-like sensation for 24–48 hours",
+          "Mild swelling, pinpoint bleeding or tightness",
+          "Rare: breakouts or prolonged redness in sensitive skin",
+        ],
+        aftercare: [
+          "Avoid makeup for at least 24 hours",
+          "Use a gentle cleanser and fragrance-free moisturiser",
+          "Avoid sun exposure and apply SPF 30+ once skin has settled",
+          "Skip active ingredients (retinoids, acids) for a few days",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Hydrafacial",
@@ -97,6 +217,28 @@ export const treatmentCategories: TreatmentCategory[] = [
           "A multi-step resurfacing ritual that cleanses, exfoliates, extracts and saturates the skin with antioxidants and peptides. Zero downtime.",
         duration: "50 min",
         image: "/treatments/hydrafacial.jpg",
+        sessions: "Monthly, or ahead of a special occasion",
+        benefits: [
+          "Deeply cleanses and unclogs congested pores",
+          "Delivers instant hydration and a visible glow",
+          "Gentle enough for regular, zero-downtime maintenance",
+          "Suits sensitive or reactive skin types",
+        ],
+        idealFor: [
+          "Congested, dull or dehydrated skin",
+          "First-time patients wanting a gentle introduction to skincare treatments",
+          "Anyone wanting a quick glow before an event",
+        ],
+        sideEffects: [
+          "Mild, temporary redness immediately after treatment",
+          "Rare: slight tightness in very sensitive skin",
+        ],
+        aftercare: [
+          "No downtime — makeup can usually be applied the same day",
+          "Keep skin hydrated and apply SPF 30+ the following day",
+          "Avoid harsh exfoliants for 24 hours",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Chemical Peeling",
@@ -105,6 +247,28 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Medical peels at carefully selected depths to address pigmentation, congestion and dullness, always prescribed after a full skin assessment.",
         duration: "30 min",
         image: "/treatments/chemical-peeling.jpg",
+        sessions: "3–6 sessions, spaced 2–4 weeks apart depending on peel depth",
+        benefits: [
+          "Addresses pigmentation, congestion and dullness",
+          "Improves overall texture and tone",
+          "Peel depth is calibrated to your specific skin needs",
+        ],
+        idealFor: [
+          "Uneven pigmentation, mild acne scarring or dull texture",
+          "Patients who have completed a full skin assessment beforehand",
+        ],
+        sideEffects: [
+          "Temporary redness, tightness or flaking",
+          "Peeling or mild sensitivity for several days depending on depth",
+          "Rare: prolonged redness or pigment changes if aftercare is not followed",
+        ],
+        aftercare: [
+          "Strict daily SPF 30+ is essential",
+          "Do not pick or peel flaking skin",
+          "Use only the gentle, prescribed skincare during recovery",
+          "Avoid sun exposure and heat for several days",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Microdermabrasion (MDA)",
@@ -113,6 +277,27 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Mechanical micro-exfoliation lifts dulling surface cells and refines congested pores, leaving skin smoother with no downtime.",
         duration: "30 min",
         image: "/treatments/microdermabrasion-mda.jpg",
+        sessions: "4–6 sessions, spaced 2–3 weeks apart",
+        benefits: [
+          "Instantly smoother, more radiant skin",
+          "Refines congested and enlarged pores",
+          "Crystal-free, gentle on most skin types",
+          "Zero downtime",
+        ],
+        idealFor: [
+          "Dull, rough or congested skin",
+          "Patients wanting a gentle, low-risk polishing treatment",
+        ],
+        sideEffects: [
+          "Mild, temporary redness or sensitivity",
+          "Rare: light dryness for a day",
+        ],
+        aftercare: [
+          "Apply SPF 30+ before sun exposure",
+          "Keep skin moisturised",
+          "Avoid strong actives for 24 hours",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Carbon Facial",
@@ -121,6 +306,26 @@ export const treatmentCategories: TreatmentCategory[] = [
           "A medical-grade carbon layer is drawn into pores then vaporised with laser energy, lifting debris, minimising pores and refining texture.",
         duration: "30–40 min",
         image: "/treatments/carbon-facial.jpg",
+        sessions: "4–6 sessions, spaced 2–4 weeks apart",
+        benefits: [
+          "Deep-cleans pores and lifts trapped debris and oil",
+          "Refines pore size and improves skin texture",
+          "Adds a mild, immediate brightening effect",
+        ],
+        idealFor: [
+          "Oily or congested skin",
+          "Enlarged pores and mild acne-prone skin",
+        ],
+        sideEffects: [
+          "Mild warmth, redness or tightness immediately after",
+          "Rare: temporary sensitivity in reactive skin",
+        ],
+        aftercare: [
+          "Apply SPF 30+ daily",
+          "Avoid harsh exfoliants for 24–48 hours",
+          "Keep skin hydrated",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Special Collagen Treatment",
@@ -129,6 +334,26 @@ export const treatmentCategories: TreatmentCategory[] = [
           "A concentrated collagen-based protocol addressing anti-aging concerns, dry and dull skin, and hair thinning through targeted infusion and stimulation techniques.",
         duration: "45–60 min",
         image: "/treatments/special-collagen-treatment.jpg",
+        sessions: "4–6 sessions, spaced 3–4 weeks apart",
+        benefits: [
+          "Supports collagen renewal for firmer, plumper skin",
+          "Improves dry, dull or lacklustre skin",
+          "May support hair vitality alongside skin goals",
+        ],
+        idealFor: [
+          "Early ageing, dryness or dullness",
+          "Patients wanting a combined skin-and-hair vitality protocol",
+        ],
+        sideEffects: [
+          "Mild redness or swelling at infusion or injection points",
+          "Temporary tenderness for a day or two",
+        ],
+        aftercare: [
+          "Avoid strenuous exercise for 24 hours",
+          "Keep the treated area clean",
+          "Follow the individualised aftercare plan from your doctor",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Dry / Scaly & Uneven Skin Treatment",
@@ -137,6 +362,26 @@ export const treatmentCategories: TreatmentCategory[] = [
           "A dedicated protocol combining barrier-repair actives and in-clinic therapies to calm, hydrate and even out rough, flaking or uneven skin.",
         duration: "40 min",
         image: "/treatments/dry-scaly-and-uneven-skin-treatment.jpg",
+        sessions: "Course tailored to severity, reviewed monthly",
+        benefits: [
+          "Calms and repairs a compromised skin barrier",
+          "Improves hydration and evens rough, flaking texture",
+          "Individually formulated after a skin-barrier assessment",
+        ],
+        idealFor: [
+          "Chronically dry, flaking or rough skin",
+          "Patients with a compromised or sensitised skin barrier",
+        ],
+        sideEffects: [
+          "Mild stinging or redness on application in very reactive skin",
+          "Rare: temporary flare-up before improvement",
+        ],
+        aftercare: [
+          "Use only the barrier-repair products recommended by your doctor",
+          "Avoid harsh cleansers, hot water and exfoliation",
+          "Apply moisturiser and SPF consistently",
+        ],
+        resultImage: placeholderResult,
       },
     ],
   },
@@ -153,6 +398,29 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Picosecond energy fragments unwanted pigment and stimulates dermal remodelling with minimal thermal impact — ideal for melasma, sun damage and tattoo removal.",
         duration: "30 min",
         image: "/treatments/pico-laser.jpg",
+        sessions: "4–6 sessions, spaced 3–4 weeks apart",
+        benefits: [
+          "Effectively fragments unwanted pigment (melasma, sunspots, tattoo ink)",
+          "Minimal thermal damage means less downtime than older lasers",
+          "Stimulates dermal collagen for improved overall texture",
+        ],
+        idealFor: [
+          "Melasma, sun damage and stubborn pigmentation",
+          "Tattoo removal",
+          "Patients assessed as suitable under the Fitzpatrick skin-type system",
+        ],
+        sideEffects: [
+          "Temporary redness, mild swelling or pinpoint bleeding",
+          "Short-lived darkening of treated pigment before it clears",
+          "Rare: blistering or pigment changes if aftercare is not followed",
+        ],
+        aftercare: [
+          "Strict daily SPF 30+ for several weeks after",
+          "Avoid direct sun exposure and tanning beds",
+          "Avoid picking at any treated spots",
+          "Follow your doctor's individualised skincare guidance",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "IPL Photofacial",
@@ -161,6 +429,27 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Intense pulsed light targets vascular and pigmented irregularities, leaving a clearer, more even complexion across a short treatment course.",
         duration: "35 min",
         image: "/treatments/ipl-photofacial.jpg",
+        sessions: "3–5 sessions, spaced 3–4 weeks apart",
+        benefits: [
+          "Improves facial redness and visible blood vessels",
+          "Reduces sun damage and pigment irregularities",
+          "Leaves a clearer, more even complexion",
+        ],
+        idealFor: [
+          "Redness, rosacea-prone skin or sun damage",
+          "Uneven skin tone from vascular or pigment concerns",
+        ],
+        sideEffects: [
+          "Temporary redness or a warm, sunburn-like feeling",
+          "Short-lived darkening of pigmented spots before they fade",
+          "Rare: blistering in overly sun-exposed skin",
+        ],
+        aftercare: [
+          "Daily SPF 30+ is essential",
+          "Avoid sun exposure and tanning beds for several weeks",
+          "Use gentle, soothing skincare for a few days",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Diode Laser",
@@ -169,6 +458,26 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Cooled diode technology delivers consistent, comfortable energy to the follicle across all treatable skin types.",
         duration: "20–60 min",
         image: "/treatments/diode-laser.jpg",
+        sessions: "6–8 sessions across the hair growth cycle",
+        benefits: [
+          "Long-term hair reduction with consistent, comfortable energy delivery",
+          "Cooling technology improves comfort during treatment",
+          "Suitable across a range of skin types",
+        ],
+        idealFor: [
+          "Unwanted facial or body hair",
+          "Most skin tones, assessed individually before treatment",
+        ],
+        sideEffects: [
+          "Mild redness or slight swelling around follicles",
+          "Rare: temporary pigment changes in sensitive skin",
+        ],
+        aftercare: [
+          "Avoid sun exposure and apply SPF between sessions",
+          "Avoid plucking or waxing between treatments (shaving is fine)",
+          "Moisturise treated areas and avoid heat/friction for 24 hours",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Laser Hair Removal",
@@ -177,6 +486,26 @@ export const treatmentCategories: TreatmentCategory[] = [
           "A structured protocol across growth cycles for face and body, planned to your hair density, skin tone and desired result.",
         duration: "20–60 min",
         image: "/treatments/laser-hair-removal.jpg",
+        sessions: "6–8 sessions, spaced 4–6 weeks apart, planned to your growth cycle",
+        benefits: [
+          "Permanent hair reduction across face and body",
+          "Protocol mapped to your hair density and skin tone",
+          "Reduces ingrown hairs and shaving-related irritation over time",
+        ],
+        idealFor: [
+          "Anyone seeking a long-term alternative to shaving or waxing",
+          "Most skin types, assessed individually beforehand",
+        ],
+        sideEffects: [
+          "Mild redness, swelling or a warm sensation around follicles",
+          "Rare: temporary pigment changes or, very rarely, blistering",
+        ],
+        aftercare: [
+          "Avoid sun exposure and apply SPF between sessions",
+          "Avoid plucking or waxing between treatments",
+          "Avoid hot showers, saunas and vigorous exercise for 24 hours",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Pigmentation Treatment",
@@ -185,6 +514,27 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Combination therapy uniting laser, medical topicals and photoprotection strategy for durable, relapse-aware pigment control.",
         duration: "30–45 min",
         image: "/treatments/pigmentation-treatment.jpg",
+        sessions: "4–6 sessions, spaced 3–4 weeks apart",
+        benefits: [
+          "Targets melasma, freckles and post-inflammatory marks",
+          "Combines laser, topicals and photoprotection for durable results",
+          "Relapse-aware planning to help maintain long-term clarity",
+        ],
+        idealFor: [
+          "Melasma, freckles and stubborn pigmentation",
+          "Patients wanting a structured, medically supervised plan rather than a single quick fix",
+        ],
+        sideEffects: [
+          "Temporary darkening of treated pigment before it clears",
+          "Mild redness or sensitivity",
+          "Rare: rebound pigmentation if sun protection is not maintained",
+        ],
+        aftercare: [
+          "Strict daily SPF 30+ is non-negotiable for lasting results",
+          "Avoid direct sun and tanning beds",
+          "Continue prescribed topicals as directed",
+        ],
+        resultImage: placeholderResult,
       },
     ],
   },
@@ -201,6 +551,27 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Micro-dosed neuromodulation placed with anatomical precision for facial lines, rejuvenated hands, or underarm hyperhidrosis, so movement and comfort stay natural.",
         duration: "20–40 min",
         image: "/treatments/botox-face-hands-armpits.jpg",
+        sessions: "Results last 3–6 months; touch-ups scheduled accordingly",
+        benefits: [
+          "Softens expression lines (forehead, frown lines, crow's feet)",
+          "Controls excess sweating in hands or underarms",
+          "Anatomically precise dosing preserves natural movement and expression",
+        ],
+        idealFor: [
+          "Dynamic wrinkles caused by repeated facial expression",
+          "Hyperhidrosis of the hands or underarms",
+        ],
+        sideEffects: [
+          "Mild bruising, redness or swelling at injection sites",
+          "Temporary headache",
+          "Rare: slight asymmetry or drooping, usually temporary and reviewed at follow-up",
+        ],
+        aftercare: [
+          "Avoid lying down or touching the area for 4 hours",
+          "Avoid strenuous exercise for 24 hours",
+          "Avoid rubbing or massaging the treated area",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Facial Fillers & Threads",
@@ -209,6 +580,27 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Hyaluronic acid artistry and PDO thread placement for cheeks, lips, chin, jawline and tear troughs — always structural first, decorative second.",
         duration: "45–60 min",
         image: "/treatments/facial-fillers-and-threads.jpg",
+        sessions: "Results last 6–18 months depending on the area and product used",
+        benefits: [
+          "Restores volume lost with age (cheeks, lips, chin, jawline, tear troughs)",
+          "Structural, natural-looking lift rather than an overfilled appearance",
+          "PDO threads add lift while stimulating collagen",
+        ],
+        idealFor: [
+          "Volume loss, flattened cheeks or a tired-looking mid-face",
+          "Patients wanting subtle, balanced enhancement",
+        ],
+        sideEffects: [
+          "Bruising, swelling or tenderness at injection sites",
+          "Temporary lumps or asymmetry that settle within days",
+          "Rare: vascular complications, which is why placement by a trained physician matters",
+        ],
+        aftercare: [
+          "Avoid touching or massaging the area unless instructed",
+          "Avoid strenuous exercise, alcohol and extreme heat for 24–48 hours",
+          "Sleep with your head slightly elevated the first night",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Thread Lift",
@@ -217,6 +609,27 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Absorbable PDO threads reposition soft tissue and stimulate collagen along the jawline, mid-face and neck.",
         duration: "60 min",
         image: "/treatments/thread-lift.jpg",
+        sessions: "Results typically last 12–18 months",
+        benefits: [
+          "Discreet lift along jawline, mid-face and neck without surgery",
+          "Absorbable threads stimulate collagen as they dissolve",
+          "Minimal downtime compared to surgical alternatives",
+        ],
+        idealFor: [
+          "Mild to moderate skin laxity and early sagging",
+          "Patients seeking a non-surgical lifting option",
+        ],
+        sideEffects: [
+          "Bruising, swelling or tenderness along thread paths",
+          "Temporary puckering or visible dimpling that resolves",
+          "Rare: thread migration or infection if aftercare is not followed",
+        ],
+        aftercare: [
+          "Avoid wide mouth movements, dental work and facial massage for 2 weeks",
+          "Sleep on your back with head elevated for the first few nights",
+          "Avoid strenuous exercise and saunas for at least a week",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "HIFU Lifting",
@@ -225,6 +638,26 @@ export const treatmentCategories: TreatmentCategory[] = [
           "High-intensity focused ultrasound reaches the foundational layers to firm and contour sagging skin progressively over three to six months.",
         duration: "60–90 min",
         image: "/treatments/hifu-lifting.jpg",
+        sessions: "1 session, with results building over 3–6 months; touch-ups yearly",
+        benefits: [
+          "Firms and contours sagging skin without surgery or downtime",
+          "Focused ultrasound reaches deeper foundational layers",
+          "Progressive, natural-looking tightening over time",
+        ],
+        idealFor: [
+          "Mild to moderate skin laxity of the face, jawline or neck",
+          "Patients wanting a non-invasive alternative to a facelift",
+        ],
+        sideEffects: [
+          "Temporary redness, swelling or tenderness",
+          "Rare: transient numbness or tingling that resolves on its own",
+        ],
+        aftercare: [
+          "Use gentle skincare for a few days",
+          "Apply SPF 30+ daily",
+          "Avoid extreme heat and strenuous exercise for 24–48 hours",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Lip Blushing / Dark Lip Treatment",
@@ -233,6 +666,27 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Semi-permanent pigmentation or brightening protocols restore a healthy, even lip tone and definition for a naturally polished finish.",
         duration: "60–90 min",
         image: "/treatments/lip-blushing-dark-lip-treatment.jpg",
+        sessions: "1–2 sessions plus a touch-up; semi-permanent results",
+        benefits: [
+          "Corrects dark or uneven lip tone",
+          "Adds soft, natural-looking colour and definition",
+          "Semi-permanent, low-maintenance result",
+        ],
+        idealFor: [
+          "Naturally dark, pigmented or uneven-toned lips",
+          "Anyone wanting subtle, long-lasting lip definition",
+        ],
+        sideEffects: [
+          "Swelling, tenderness or mild peeling as pigment settles",
+          "Temporary colour intensity before it softens to the final shade",
+          "Rare: cold sore reactivation in predisposed patients",
+        ],
+        aftercare: [
+          "Keep lips moisturised with the recommended balm",
+          "Avoid spicy food, hot drinks and excessive lip movement for a few days",
+          "Avoid sun exposure and swimming until fully healed",
+        ],
+        resultImage: placeholderResult,
       },
     ],
   },
@@ -249,6 +703,26 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Trichological assessment followed by PRP, mesotherapy, low-level laser and prescription therapy tailored to the cause of your shedding.",
         duration: "45 min",
         image: "/treatments/hair-loss-treatment.jpg",
+        sessions: "Course of 4–6 sessions, then maintenance based on response",
+        benefits: [
+          "Addresses hair thinning based on a proper trichological diagnosis",
+          "Combines PRP, mesotherapy, low-level laser and prescription therapy as needed",
+          "Tailored to the underlying cause rather than a generic fix",
+        ],
+        idealFor: [
+          "Early to moderate hair thinning or shedding",
+          "Patients wanting a diagnosis-first approach before treatment",
+        ],
+        sideEffects: [
+          "Mild scalp tenderness, redness or swelling after PRP/mesotherapy",
+          "Rare: temporary shedding before regrowth (a recognised part of the process)",
+        ],
+        aftercare: [
+          "Avoid washing hair for 12–24 hours after PRP/mesotherapy",
+          "Avoid strenuous exercise on treatment day",
+          "Follow the prescribed home-care routine consistently",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Stretch Marks & Old Scars",
@@ -257,6 +731,26 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Fractional resurfacing and microneedling with growth factors to rebuild dermal architecture and soften striae and old scarring.",
         duration: "45 min",
         image: "/treatments/stretch-marks-and-old-scars.jpg",
+        sessions: "4–6 sessions, spaced 4–6 weeks apart",
+        benefits: [
+          "Rebuilds dermal structure to soften striae and old scarring",
+          "Improves texture and tone of the treated area",
+          "Combines fractional resurfacing with growth-factor microneedling",
+        ],
+        idealFor: [
+          "Stretch marks (recent or older)",
+          "Old surgical, injury or acne scarring",
+        ],
+        sideEffects: [
+          "Redness, swelling or pinpoint bleeding at the treated site",
+          "Mild tenderness for a few days",
+        ],
+        aftercare: [
+          "Keep the area clean and moisturised",
+          "Avoid sun exposure on the treated area",
+          "Avoid tight clothing rubbing the area for a few days",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "80K Cavitation — Fat Reduction",
@@ -265,6 +759,26 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Ultrasonic cavitation technology targets localised fat deposits around the double chin, abdomen, thighs and arms, planned alongside realistic, medically sound expectations.",
         duration: "45–60 min",
         image: "/treatments/80k-cavitation-fat-reduction.jpg",
+        sessions: "6–8 sessions, spaced weekly",
+        benefits: [
+          "Non-surgical contouring for double chin, abdomen, thighs and arms",
+          "No downtime — return to normal activity immediately",
+          "Planned around realistic, medically sound expectations",
+        ],
+        idealFor: [
+          "Localised fat deposits resistant to diet and exercise",
+          "Patients seeking a non-surgical contouring option, not a weight-loss substitute",
+        ],
+        sideEffects: [
+          "Mild redness, warmth or tingling in the treated area",
+          "Rare: temporary bruising or tenderness",
+        ],
+        aftercare: [
+          "Drink plenty of water to support the body's natural elimination process",
+          "Light activity is encouraged between sessions",
+          "Maintain a balanced diet to support and extend results",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "PRP / PRF — Body & Knee Joints",
@@ -273,6 +787,26 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Platelet-rich plasma and fibrin concentrates prepared from your own blood, used to support tissue repair and comfort in body areas and knee joints.",
         duration: "45–60 min",
         image: "/treatments/prp-prf-body-and-knee-joints.jpg",
+        sessions: "3–4 sessions, spaced 4–6 weeks apart",
+        benefits: [
+          "Uses your own platelets to support tissue repair",
+          "May improve comfort in treated joints",
+          "Extends regenerative therapy benefits beyond the face",
+        ],
+        idealFor: [
+          "Patients wanting a regenerative approach for body areas or knee joints",
+          "Those who prefer treatments using their own biological material",
+        ],
+        sideEffects: [
+          "Redness, swelling or bruising at injection sites",
+          "Mild soreness for a day or two, similar to a minor strain",
+        ],
+        aftercare: [
+          "Rest the treated joint/area for 24 hours",
+          "Avoid strenuous exercise for 48 hours",
+          "Apply cold compress if advised for swelling",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Acne & Acne Scar Treatment",
@@ -281,6 +815,27 @@ export const treatmentCategories: TreatmentCategory[] = [
           "A staged medical approach combining peels, laser, microneedling and topical therapy to calm active breakouts and resurface acne scarring.",
         duration: "40–60 min",
         image: "/treatments/acne-and-acne-scar-treatment.jpg",
+        sessions: "Staged course, reviewed monthly based on progress",
+        benefits: [
+          "Calms active breakouts and reduces future flare-ups",
+          "Resurfaces and softens acne scarring over time",
+          "Combines peels, laser, microneedling and topical therapy as needed",
+        ],
+        idealFor: [
+          "Active acne or acne-prone skin",
+          "Post-acne scarring and pigmentation",
+        ],
+        sideEffects: [
+          "Temporary redness, dryness or peeling",
+          "Possible short-term purging before improvement",
+          "Rare: irritation if multiple actives are introduced too quickly",
+        ],
+        aftercare: [
+          "Follow the prescribed skincare routine exactly as advised",
+          "Avoid picking at active breakouts or healing skin",
+          "Apply SPF 30+ daily, especially after laser or peel sessions",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Warts / Lumps / Spots / Naevi Removal",
@@ -289,6 +844,26 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Clinical removal of warts, lumps, spots and naevi using the most appropriate energy-based or minor-procedure technique, assessed individually for the safest outcome.",
         duration: "20–40 min",
         image: "/treatments/warts-lumps-spots-naevi-removal.jpg",
+        sessions: "Usually 1 session per lesion; some cases need a follow-up",
+        benefits: [
+          "Safe, precise removal assessed individually per lesion",
+          "Minimises scarring risk with the most appropriate technique",
+          "Suitable for warts, lumps, spots and naevi",
+        ],
+        idealFor: [
+          "Unwanted, benign skin growths affecting appearance or comfort",
+          "Patients who want any new or changing lesion medically assessed first",
+        ],
+        sideEffects: [
+          "Mild redness, scabbing or a small mark during healing",
+          "Rare: infection or scarring if aftercare is not followed",
+        ],
+        aftercare: [
+          "Keep the treated area clean and dry",
+          "Avoid picking at any scab that forms",
+          "Apply SPF once healed to reduce pigment changes",
+        ],
+        resultImage: placeholderResult,
       },
       {
         name: "Ear & Nose Piercing",
@@ -297,6 +872,25 @@ export const treatmentCategories: TreatmentCategory[] = [
           "Performed in a sterile clinical setting with precision placement and aftercare guidance, suitable for both adults and children.",
         duration: "15–20 min",
         image: "/treatments/ear-and-nose-piercing.jpg",
+        sessions: "Single visit, with a follow-up check if needed",
+        benefits: [
+          "Performed in a sterile clinical setting with precision placement",
+          "Suitable for both adults and children",
+          "Includes clear aftercare guidance to reduce complications",
+        ],
+        idealFor: [
+          "Adults and children wanting a hygienic, medically supervised piercing",
+        ],
+        sideEffects: [
+          "Mild redness, tenderness or swelling at the site",
+          "Rare: infection if aftercare instructions are not followed",
+        ],
+        aftercare: [
+          "Clean the piercing as instructed, usually twice daily",
+          "Avoid touching the area with unwashed hands",
+          "Avoid swimming pools and sea water until fully healed",
+        ],
+        resultImage: placeholderResult,
       },
     ],
   },

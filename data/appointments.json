@@ -64,5 +64,16 @@
     "date": "2026-08-14",
     "slot": "11:00-13:00",
     "createdAt": "2026-08-06T09:43:47.872Z"
+  },
+  {
+    "id": "2026-08-15-11:00-13:00-4qks3fd",
+    "name": "Kaveesha Sandeeepani",
+    "phone": "0742708527",
+    "email": "senukikiyara027@gmail.com",
+    "treatment": "Skin Whitening & Rejuvenation",
+    "message": "bla bla bla",
+    "date": "2026-08-15",
+    "slot": "11:00-13:00",
+    "createdAt": "2026-08-06T10:51:35.851Z"
   }
 ]
